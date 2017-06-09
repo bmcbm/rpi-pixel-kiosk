@@ -3,6 +3,7 @@
 if [ -e '/boot/alwayson' ]; then
   xset -dpms
   xset s off
+  xset s noblank
 fi
 
 # clean up if like me you just yank the power or ssh in and poweroff
