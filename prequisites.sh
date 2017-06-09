@@ -7,5 +7,5 @@ sudo touch /boot/alwayson
 # Enable SSH server
 sudo touch /boot/ssh
 # Disable screensaver
-sudo sed -i -e 's/@xscreensaver/#@xscreensaver/' /etc/xdg/lxsession/LXDE-pi/autostart .config/lxsession/LXDE-pi/autostart
+sudo sed -i -e 's/@xscreensaver/#@xscreensaver/' /etc/xdg/lxsession/LXDE-pi/autostart ~/.config/lxsession/LXDE-pi/autostart
 sudo reboot
