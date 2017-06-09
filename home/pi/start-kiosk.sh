@@ -9,4 +9,9 @@
 # clean up if like me you just yank the power or ssh in and poweroff
 rm -rf ~/.config/chromium/Singleton*
 # Launch chromium in kiosk mode, incognito with a reputable, well-designed url
-chromium-browser --noerrdialogs --kiosk --incognito https://www.codesign2.co.uk
+URL="https://www.codesign2.co.uk"
+if [ -e ~/kiosk_url.override ] ; then
+    URL=$(cat ~/kiosk_url.override) 
+fi
+
+chromium-browser --noerrdialogs --kiosk --incognito "$URL"
