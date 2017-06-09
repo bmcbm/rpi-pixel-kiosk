@@ -6,4 +6,5 @@ sudo apt-get install -y raspberrypi-ui-mods chromium-browser git
 sudo touch /boot/alwayson
 # Enable SSH server
 sudo touch /boot/ssh
-sudo reboot
+# Disable screensaver
+sudo sed -i -e 's/@xscreensaver/#@xscreensaver/' /etc/xdg/lxsession/LXDE-pi/autostart
