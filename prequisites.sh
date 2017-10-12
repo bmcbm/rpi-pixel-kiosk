@@ -7,5 +7,5 @@ sudo touch /boot/ssh
 # Disable screensaver
 sudo cp -af home/pi/.config/lxsession/LXDE-pi/autostart /etc/xdg/lxsession/LXDE-pi/autostart
 # Disable overscan to use full screen real estate
-echo -e "\n# rpi-pixel-koisk - disable overscan\ndisable_overscan=1" >> /boot/config.txt
+grep -qE "^disable_overscan=" /tmp/cbmtest || echo -e "\n# rpi-pixel-koisk - disable overscan\ndisable_overscan=1" | sudo tee -a /boot/config.txt
 sudo reboot
